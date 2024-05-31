@@ -1,0 +1,10 @@
+@media only screen and (min-width: 1024px) {
+    ion-menu {
+        max-width: 300px;
+    }
+}
+ion-menu {
+    border-right:1px solid #e3e3e3;
+    --background: #F0C62D;
+    // --background: #d5a90b;
+}
