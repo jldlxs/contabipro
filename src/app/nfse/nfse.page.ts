@@ -4,11 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonMenuToggle } from '@ionic/angular/standalone';
 
 @Component({
-  selector: 'app-nfse',
-  templateUrl: './nfse.page.html',
-  styleUrls: ['./nfse.page.scss'],
-  standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonMenuToggle]
+    selector: 'app-nfse',
+    templateUrl: './nfse.page.html',
+    styleUrls: ['./nfse.page.scss'],
+    imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonMenuToggle]
 })
 export class NfsePage implements OnInit {
 

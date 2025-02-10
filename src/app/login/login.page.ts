@@ -7,11 +7,10 @@ import { MaskitoDirective } from '@maskito/angular';
 import { ButtonsComponent } from '../components/buttons/buttons.component';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.page.html',
-  styleUrls: ['./login.page.scss'],
-  standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, MaskitoDirective, IonText, IonInput, ButtonsComponent]
+    selector: 'app-login',
+    templateUrl: './login.page.html',
+    styleUrls: ['./login.page.scss'],
+    imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, MaskitoDirective, IonText, IonInput, ButtonsComponent]
 })
 export class LoginPage implements OnInit {
 
