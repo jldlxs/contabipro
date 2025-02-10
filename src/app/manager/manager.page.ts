@@ -14,6 +14,37 @@ export class ManagerPage implements OnInit {
 
   constructor() { }
 
+  showFolha: boolean = false
+  showNFSe: boolean = false
+  showNFe: boolean = false
+
+  // menus = [
+  //   {menu:'NFe', status: 2},
+  //   {menu:'NFSe', status: 2},
+  //   {menu:'Folha', status: 2},
+  // ]
+  opened: string
+
+  changeOpened(menu: string) {
+    switch (menu) {
+      case 'NFe':
+        this.showFolha = this.showNFSe = false
+        this.showNFe = !this.showNFe
+        break;
+        case 'Folha':
+        this.showNFe = this.showNFSe = false
+        this.showFolha = !this.showFolha
+        break;
+        case 'NFSe':
+        this.showNFe = this.showFolha = false
+        this.showNFSe = !this.showNFSe
+        break;
+
+      default:
+        break;
+    }
+  }
+
   ngOnInit() {
   }
 

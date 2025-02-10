@@ -1,8 +1,3 @@
-@import 'tailwindcss/base';
-
-@import 'tailwindcss/components';
-
-@import 'tailwindcss/utilities';
 /*
  * App Global CSS
  * ----------------------------------------------------------------------------
@@ -48,11 +43,10 @@
 
 
 
-
-
 /* GENERAL */
 //fonts
 @import "assets/fonts/stylesheet.css";
+
 //general
 ion-header,
 ion-footer,
@@ -84,7 +78,14 @@ ion-modal {
         margin-top: 1%;
     }
 }
+
 // set modal auto-height to the contents
 .modal-auto-height {
     --height: auto;
+}
+
+
+.container {
+    width: 92%;
+    margin-left: 4%;
 }

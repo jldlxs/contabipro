@@ -1,0 +1,54 @@
+@if(type == 'standard'){
+<div [ngClass]="enabled == true && active == true ? 'bg-gray-800' : 'bg-gray-400'"
+  class="h-[45px] text-white px-3 py-2 flex justify-center align-middle items-center font-tommybold w-full rounded-full cursor-pointer">
+  @if(active == true){
+  <div class="text-lg md:text-base">{{text}}</div>
+  }
+  @if(active == false){
+  <ion-spinner class="size-6 text-white" name="crescent"></ion-spinner>
+  }
+</div>
+}
+
+
+@if(type == 'danger'){
+<div [ngClass]="enabled == true && active == true ? 'bg-red-600' : 'bg-gray-400'"
+  class="h-[45px] text-white px-3 py-2 flex justify-center align-middle items-center font-tommybold w-full rounded-full cursor-pointer">
+  @if(active == true){
+  <div class="text-lg md:text-base">{{text}}</div>
+  }
+  @if(active == false){
+  <ion-spinner class="size-6 text-white" name="crescent"></ion-spinner>
+  }
+</div>
+}
+
+
+@if(type == 'outline'){
+<div [ngClass]="enabled == true && active == true ? 'border-2 border-gray-400' : 'bg-gray-400'"
+  class="h-[45px] text-gray-400 px-3 py-2 flex justify-center align-middle items-center font-tommybold w-full rounded-full cursor-pointer">
+  @if(active == true){
+  <div class="text-lg md:text-base">{{text}}</div>
+  }
+  @if(active == false){
+  <ion-spinner class="size-6 text-gray-400" name="crescent"></ion-spinner>
+  }
+</div>
+}
+
+
+@if(type == 'icon'){
+<div [ngClass]="active == true ? 'bg-gray-800' : 'bg-gray-400'"
+  class="h-[45px] text-white px-3 py-2 flex justify-center align-middle items-center font-tommybold w-full rounded-full cursor-pointer">
+  @if(icon == 'XYZ' && active == true){
+  <div class="text-lg md:text-base">{{text}}</div>
+  <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 ml-2">
+        <path fill-rule="evenodd" d="M15.75 1.5a6.75 6.75 0 0 0-6.651 7.906c.067.39-.032.717-.221.906l-6.5 6.499a3 3 0 0 0-.878 2.121v2.818c0 .414.336.75.75.75H6a.75.75 0 0 0 .75-.75v-1.5h1.5A.75.75 0 0 0 9 19.5V18h1.5a.75.75 0 0 0 .53-.22l2.658-2.658c.19-.189.517-.288.906-.22A6.75 6.75 0 1 0 15.75 1.5Zm0 3a.75.75 0 0 0 0 1.5A2.25 2.25 0 0 1 18 8.25a.75.75 0 0 0 1.5 0 3.75 3.75 0 0 0-3.75-3.75Z" clip-rule="evenodd" />
+      </svg> -->
+
+  }
+  @if(active == false){
+  <ion-spinner class="size-6 text-white" name="crescent"></ion-spinner>
+  }
+</div>
+}

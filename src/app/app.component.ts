@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
+import { IonApp, IonRouterOutlet, NavController } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +8,14 @@ import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
   imports: [IonApp, IonRouterOutlet],
 })
 export class AppComponent {
-  constructor() {}
+  constructor(
+    private navCtrl: NavController
+  ) {
+    this.initApp()
+  }
+
+  initApp() {
+    // this.navCtrl.navigateForward('/manager/nfse')
+    // this.navCtrl.navigateForward('/login')
+  }
 }

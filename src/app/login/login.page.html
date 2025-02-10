@@ -1,0 +1,36 @@
+<ion-content fullscreen="true">
+
+  <div class="desktop">
+
+    <div class="py-3 px-5 w-[35vw] bg-white rounded-lg float-right mr-[10vw] mt-[25vh] relative">
+      <div class="absolute -inset-y-1 -inset-x-1 -z-10">
+        <div class="w-full h-full opacity-70 blur-[6px] bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E]">
+        </div>
+      </div>
+
+      <div class="flex content-center justify-center mt-2 mb-3 text-2xl">ContabiPró</div>
+      
+
+      <ion-input mode="ios" type="text" inputmode="numeric" [(ngModel)]="user" [maskitoElement]="maskPredicate"
+        [maskito]="phoneMask" class="bg-[#EBEBEB] px-3 rounded-lg font-tommyregular" labelPlacement="floating"
+        placeholder="">
+        <div slot="label"><ion-text class="text-gray-500 font-tommyregular">Número do celular</ion-text> </div>
+      </ion-input>
+
+      <ion-input mode="ios" type="password" inputmode="text" [(ngModel)]="password"
+        class="mt-4 bg-[#EBEBEB] px-3 rounded-lg font-tommyregular" labelPlacement="floating" placeholder="">
+        <div slot="label"><ion-text class="text-gray-500 font-tommyregular">Senha de acesso</ion-text> </div>
+      </ion-input>
+
+      <div class="mt-6 mb-3">
+        <app-buttons (click)="login()" type="standard" text="Acessar"
+        [active]="buttonActive"></app-buttons>
+        <div class="flex justify-center mt-5 text-sm text-gray-600 font-tommybold cursor-pointer">Esqueci minha senha?</div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+</ion-content>

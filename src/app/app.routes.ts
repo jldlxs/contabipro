@@ -27,4 +27,8 @@ export const routes: Routes = [
     path: 'nfse',
     loadComponent: () => import('./nfse/nfse.page').then( m => m.NfsePage)
   },
+  {
+    path: 'login',
+    loadComponent: () => import('./login/login.page').then( m => m.LoginPage)
+  },
 ];

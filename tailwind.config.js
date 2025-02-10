@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'brand': '#0B3F7E',
+        'brand': '#4585E2',
       },
       fontFamily:{
         'tommyregular': 'made_tommyregular',
