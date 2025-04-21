@@ -6,16 +6,12 @@
 
 ion-menu {
     border-right: 1px solid #e3e3e3;
-    --background: #e8e8e8;
+    --background: #f3f3f3;
     // --background: #d5a90b;
 }
 
 
 .clicked {
-    .options {
-        display: block;
-    }
-
     .arrow {
         transform: rotate(180deg);
     }

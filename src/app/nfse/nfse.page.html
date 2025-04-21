@@ -1,17 +1,106 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>nfse</ion-title>
-  </ion-toolbar>
-</ion-header>
+<div class="min-h-screen bg-gray-100 p-6">
+  <!-- Cabeçalho / Navegação -->
+  <header class="bg-white shadow rounded-md p-4 mb-6 flex justify-between items-center">
+    <h1 class="text-xl font-semibold">Emissor de Nota Fiscal de Produtos (NF‑e)</h1>
+    <nav class="space-x-4">
+      <button class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Nota de Saída (Vendas)</button>
+      <button class="px-4 py-2 text-gray-700 rounded hover:bg-gray-200">Nota de Entrada (Compras)</button>
+    </nav>
+  </header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">nfse</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <!-- Objetivo da Nota Fiscal -->
+  <section class="bg-white shadow rounded-md p-4 mb-6">
+    <label class="block text-sm font-medium text-gray-700 mb-2">Objetivo da Nota Fiscal</label>
+    <select class="w-full border-gray-300 rounded-md">  
+      <option>Venda de Mercadorias</option>
+      <option>Prestação de Serviços</option>
+    </select>
+  </section>
 
-     <ion-menu-toggle menuId="main-content">
-      Toggle Menu
-    </ion-menu-toggle>
-</ion-content>
+  <!-- Destinatário da Nota Fiscal -->
+  <section class="bg-white shadow rounded-md p-4 mb-6 space-y-4">
+    <div class="flex items-center space-x-6">
+      <label class="flex items-center space-x-2">
+        <input type="radio" name="tipoPessoa" class="text-blue-600" />
+        <span>Pessoa Física</span>
+      </label>
+      <label class="flex items-center space-x-2">
+        <input type="radio" name="tipoPessoa" class="text-blue-600" />
+        <span>Pessoa Jurídica</span>
+      </label>
+      <label class="flex items-center space-x-2 ml-auto">
+        <input type="checkbox" class="text-blue-600" />
+        <span>Consumidor Final</span>
+      </label>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <input type="text" placeholder="CPF/CNPJ" class="border-gray-300 rounded-md p-2 w-full" />
+      <input type="text" placeholder="Nome do Destinatário" class="border-gray-300 rounded-md p-2 w-full" />
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-5 gap-4">
+      <input type="text" placeholder="CEP" class="border-gray-300 rounded-md p-2 w-full" />
+      <input type="text" placeholder="Endereço" class="border-gray-300 rounded-md p-2 w-full col-span-2" />
+      <input type="text" placeholder="Bairro" class="border-gray-300 rounded-md p-2 w-full" />
+      <input type="text" placeholder="Cidade/Estado" class="border-gray-300 rounded-md p-2 w-full" />
+    </div>
+  </section>
+
+  <!-- Produtos da Nota Fiscal -->
+  <section class="bg-white shadow rounded-md p-4 mb-6">
+    <label class="block text-sm font-medium text-gray-700 mb-2">Produtos da Nota Fiscal</label>
+    <table class="min-w-full divide-y divide-gray-200 mb-4">
+      <thead class="bg-gray-50">
+        <tr>
+          <th class="px-4 py-2 text-left text-sm font-medium text-gray-500">Nome do Produto</th>
+          <th class="px-4 py-2 text-right text-sm font-medium text-gray-500">Valor Unitário</th>
+          <th class="px-4 py-2 text-right text-sm font-medium text-gray-500">Quantidade</th>
+          <th class="px-4 py-2 text-right text-sm font-medium text-gray-500">Valor Total</th>
+          <th class="px-4 py-2 text-center text-sm font-medium text-gray-500">CFOP</th>
+          <th class="px-4 py-2"></th>
+        </tr>
+      </thead>
+      <tbody class="bg-white divide-y divide-gray-200">
+        <tr>
+          <td class="px-4 py-2">Coca‑Cola Lata 350ml (Caixa com 12)</td>
+          <td class="px-4 py-2 text-right">R$ 0,00</td>
+          <td class="px-4 py-2 text-right">0</td>
+          <td class="px-4 py-2 text-right">R$ 0,00</td>
+          <td class="px-4 py-2 text-center">1.234</td>
+          <td class="px-4 py-2 space-x-2 flex justify-center">
+            <button class="px-2 py-1 bg-yellow-400 text-white rounded text-xs">Pré-Configurar Impostos</button>
+            <button class="px-2 py-1 bg-red-500 text-white rounded text-xs">Remover</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">+ Adicionar Produto</button>
+  </section>
+
+  <!-- Informações Finais -->
+  <section class="bg-white shadow rounded-md p-4 mb-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div>
+      <label class="block text-sm font-medium text-gray-700 mb-2">Forma de Pagamento</label>
+      <select class="w-full border-gray-300 rounded-md p-2">
+        <option>Selecione...</option>
+      </select>
+    </div>
+    <div>
+      <label class="block text-sm font-medium text-gray-700 mb-2">Tipo de Transporte</label>
+      <select class="w-full border-gray-300 rounded-md p-2">
+        <option>Selecione...</option>
+      </select>
+    </div>
+  </section>
+
+  <!-- Totais e Ações -->
+  <footer class="flex justify-between items-center bg-white shadow rounded-md p-4">
+    <div class="space-y-1">
+      <div>Total de Produtos: <span class="font-medium">R$ 1.000.000,00</span></div>
+      <div>Total da NF‑e: <span class="font-semibold">R$ 1.000.000,00</span></div>
+    </div>
+    <div class="space-x-2">
+      <button class="px-4 py-2 border border-gray-300 rounded hover:bg-gray-100">Limpar</button>
+      <button class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Gerar e Emitir NF‑e</button>
+    </div>
+  </footer>
+</div>
